@@ -25,7 +25,6 @@ if (!defined('ABSPATH')) {
   if (!empty($mobile_favicon)) echo '<link rel="apple-touch-icon-precomposed" href="' . esc_url($mobile_favicon['url']) . '">';
   if (!empty($header_bar_color)) echo '<meta name="theme-color" content="' . $header_bar_color . '">';
   ?>
-
   <?php wp_head(); ?>
 </head>
 
