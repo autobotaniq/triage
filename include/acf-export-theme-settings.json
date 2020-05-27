@@ -1,0 +1,152 @@
+[
+    {
+        "key": "group_5d279ea8051d5",
+        "title": "Theme settings",
+        "fields": [
+            {
+                "key": "field_5d27a015597d3",
+                "label": "Header",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d279f44483db",
+                "label": "Logo header",
+                "name": "acf_theme_logo_header",
+                "type": "image",
+                "instructions": "Main logo, that will appear in the header.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d279f92483dc",
+                "label": "Logo header retina",
+                "name": "acf_theme_logo_header_retina",
+                "type": "image",
+                "instructions": "Select an image file for the retina version of the logo. It should be exactly 2x the size of the main logo.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d27a03e597d4",
+                "label": "Favicon",
+                "name": "acf_theme_favicon",
+                "type": "image",
+                "instructions": "Firefox, Chrome, Safari, IE 11+ and Opera. 192x192 pixels in size.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d27a062597d5",
+                "label": "Favicon for iOS and Android",
+                "name": "acf_theme_favicon_ios_android",
+                "type": "image",
+                "instructions": "Touch Icons - iOS and Android 2.1+ 180x180 pixels in size.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d27a08a597d6",
+                "label": "Mobile browser bar color",
+                "name": "acf_theme_bar_color",
+                "type": "color_picker",
+                "instructions": "Chrome 39+ for Android on Lollipop.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#FFFFFF"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "theme-general-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

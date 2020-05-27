@@ -1,0 +1,172 @@
+@import "variables";
+
+.tg-footer {
+	background-color: #858688;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url(../img/mask-3.png);
+	border-bottom: 12px solid $brand-primary;
+
+	.logo {
+		display: block;
+
+		@media (max-width: 991px) {
+			width: 126px;
+		}
+	}
+
+	&__nav {
+		border-bottom: 3px solid #ffffff;
+	}
+
+	&__menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		li {
+			padding: 0 5px;
+
+			@media (min-width: 1200px) {
+				padding: 0 10px;
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		a {
+			font-size: rem(14);
+			line-height: 36px;
+			display: block;
+			font-weight: bold;
+			color: #ffffff;
+
+			@media (min-width: 1200px) {
+				font-size: rem(16);
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: #ffffff;
+			}
+		}
+	}
+
+	&__address {
+		color: #ffffff;
+		line-height: 1.66;
+	}
+
+	&__social {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media (min-width: 992px) {
+			justify-content: flex-start;
+		}
+
+		a {
+			display: inline-block;
+			margin: 0 10px;
+			width: 29px;
+			height: 29px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		
+		&-fb {
+			background-image: url(../img/facebook.png);
+		}
+
+		&-tw {
+			background-image: url(../img/twitter.png);
+		}
+		
+		&-in {
+			background-image: url(../img/linkedin.png);
+		}
+	}
+
+	&__nav-copyright {
+
+	}
+
+	&__menu-copyright {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+
+		@media (min-width: 992px) {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+
+		li {
+			text-align: center;
+
+			@media (min-width: 992px) {
+				padding: 0 5px;
+			}
+
+			@media (min-width: 1200px) {
+				padding: 0 10px;
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		a {
+			font-size: rem(18);
+			line-height: 36px;
+			display: block;
+			font-weight: bold;
+			color: #ffffff;
+
+			@media (min-width: 1200px) {
+				font-size: rem(16);
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: #ffffff;
+			}
+		}
+	}
+
+	&__copyright {
+		color: #ffffff;
+		font-size: rem(16);
+		font-weight: 700;
+		text-align: center;
+	}
+}

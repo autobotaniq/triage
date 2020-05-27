@@ -1,0 +1,70 @@
+@import "variables";
+
+// Title
+.tg-title {
+	font-size: rem(26);
+	line-height: 1.2;
+	font-weight: bold;
+	padding-left: 26px;
+	position: relative;
+	padding-bottom: 16px;
+
+	@media (min-width: 768px) {
+		font-size: rem(30);
+	}
+	@media (min-width: 992px) {
+		font-size: rem(36);
+		margin-left: 30px;
+	}
+	@media (min-width: 1200px) {
+		margin-left: 45px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $brand-primary;
+		width: 11px;
+	}
+}
+
+.tg-maw-720 {
+	max-width: 720px;
+}
+
+.tg-botton {
+	min-width: 184px;
+	line-height: 46px;
+	border-radius: 23px;
+	padding: 0 20px;
+	text-align: center;
+	font-size: rem(16);
+	font-weight: bold;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&_dark {
+		background-color: $brand-primary;
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&_white {
+		background-color: #fff;
+		color: #000;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+

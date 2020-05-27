@@ -1,0 +1,186 @@
+@import "variables";
+
+body {
+	font-size: rem($base-font-size);
+	line-height: $base-line-height;
+	font-family: $base-font-family;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: $h-margin;
+	padding: $h-padding;
+	line-height: $h-line-height;
+	font-weight: 700;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+h1 {
+	font-size: rem($h1-font-size);
+}
+
+h2 {
+	font-size: rem($h2-font-size);
+}
+
+h3 {
+	font-size: rem($h3-font-size);
+}
+
+h4 {
+	font-size: rem($h4-font-size);
+}
+
+h5 {
+	font-size: rem($h5-font-size);
+}
+
+h6 {
+	font-size: rem($h6-font-size);
+}
+
+p, dl {
+	margin-bottom: 20px;
+}
+
+dd {
+	margin: 0 20px 20px;
+}
+
+ul {
+	list-style: disc;
+
+	ul {
+		list-style-type: circle;
+
+		ul {
+			list-style-type: square;
+		}
+	}
+}
+
+ul, ol {
+	padding: 0;
+}
+
+ul {
+	margin: 0 0 25px 20px;
+}
+
+ol {
+	margin: 0 0 25px 25px;
+}
+
+code {
+	background-color: #f9f9f9;
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 3px;
+}
+
+pre {
+	background-color: #eee;
+	font-size: rem($base-font-size * 1.0625);
+	line-height: $base-line-height;
+	margin-bottom: 20px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 15px;
+	text-align: left;
+
+	[dir=rtl] & {
+		text-align: right;
+	}
+}
+
+kbd {
+	padding: 2px 5px;
+	border-radius: 4px;
+}
+
+table {
+	width: 100%;
+	border: none;
+	box-shadow: 0 4px 10px rgba(0,0,0,.1);
+	//border: 1px solid #eee;
+	margin: 15px 0 25px;
+
+	caption {
+		caption-side: top;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 10px;
+	}
+
+	thead {
+		background-color: #f9f9f9;
+	}
+
+	tbody {
+
+		tr {
+			border-bottom: 1px solid #eee;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	tfoot {
+		background-color: #f9f9f9;
+	}
+
+	th, td {
+		padding: 10px 15px;
+	}
+}
+
+blockquote, q {
+	padding: 0 0 0 40px;
+	position: relative;
+	display: block;
+
+	&:before {
+		content: '\201d';
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: rem($base-font-size * 2.25);
+		line-height: 1.1;
+		font-weight: 700;
+		color: #007bff;
+	}
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+embed,
+iframe,
+object {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+a {
+	color: #2775ff;
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&:focus {
+		color: #2775ff;
+		text-decoration: underline;
+	}
+}

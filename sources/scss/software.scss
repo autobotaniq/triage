@@ -1,0 +1,76 @@
+@import "variables";
+
+.tg-panel-solution {
+	position: relative;
+	background-color: $brand-secondary-lite;
+
+	&__top {
+		width: 100%;
+		max-width: 1366px;
+		margin-right: auto;
+		margin-left: auto;
+
+		@media (min-width: 1200px) {
+			padding-right: 45px;
+			padding-left: 45px;
+		}
+	}
+
+		&__text {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 30px 15px;
+
+		@media (min-width: 1310px) {
+			margin-left: 225px;
+		}
+
+		@media (min-width: 1200px) {
+			flex: 0 0 470px;
+			max-width: 470px;
+			padding: 85px 0 0;
+		}
+	}
+
+		&__jp {
+		flex: 0 0 100%;
+		max-width: 100%;
+		position: relative;
+
+		@media (min-width: 1200px) {
+			flex: 0 0 495px;
+			max-width: 495px;
+		}
+
+		&-img {
+			width: 100%;
+
+			@media (min-width: 1200px) {
+				position: absolute;
+				right: 35px;
+				bottom: 20px;
+				max-width: 460px;
+			}
+
+			img {
+				width: 100%;
+
+				@media (max-width: 1199px) {
+					border-bottom: 25px solid $brand-primary;
+				}
+			}
+		}
+
+		&-layout {
+			margin-left: auto;
+			width: 343px;
+			height: 462px;
+			background-color: $brand-primary;
+			display: none;
+
+			@media (min-width: 1200px) {
+				display: block;
+			}
+		}
+	}
+}
