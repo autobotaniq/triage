@@ -1,1 +1,0 @@
-{"version":3,"sources":["test-cmp.scss"],"names":[],"mappings":"AAEA,Y,CACC,wB","file":"../test-cmp.css","sourcesContent":["@import \"../../scss/variables\";\r\n\r\n.testimonial  {\r\n\tbackground-color: #0096ff;\r\n}"]}
