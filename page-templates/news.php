@@ -31,6 +31,7 @@ get_header();
 					<img src="<?php bloginfo('template_url'); ?>/assets/img/pop-up.jpg" alt="">
 				</p>
 			</div>
+            <p class="close-text t-align-center py-30 f-weight-300">Close Page</p>
 		</div>
 	</div>
 	<div class="tg-news__articles-container tg-maw-720 mb-40">
