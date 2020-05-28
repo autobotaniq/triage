@@ -1,13 +1,13 @@
 <?php
 
+$tg_template_art_title = !empty($tg_template_art_title) ? $tg_template_art_title : 'Visualize What’s Possible';
+$tg_template_art_description = !empty($tg_template_art_description) ? $tg_template_art_description : 'Schedule a demo and find out how Triage<br> Partners can help optimize your operations.';
+
 $tg_template_art_link = !empty($tg_template_art_link) ? $tg_template_art_link : array(
   'title' => 'Contact Us',
   'url' => '#',
   'target' => ''
 );
-
-$tg_template_art_title = !empty($tg_template_art_title) ? $tg_template_art_title : 'Visualize What’s Possible';
-$tg_template_art_description = !empty($tg_template_art_description) ? $tg_template_art_description : 'Schedule a demo and find out how Triage<br> Partners can help optimize your operations.';
 
 $tg_template_art_image = !empty($tg_template_art_image) ? $tg_template_art_image : array(
   'sizes' => array(

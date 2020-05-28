@@ -35,23 +35,35 @@
 		max-width: 100%;
 		padding: 30px 15px;
 
-		@media (min-width: 1310px) {
-			margin-left: 225px;
+		@media (min-width: 768px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: 85px 15px 0;
 		}
 
-		@media (min-width: 1200px) {
+		@media (min-width: 992px) {
 			flex: 0 0 470px;
 			max-width: 470px;
 			padding: 85px 0 0;
 		}
+
+		@media (min-width: 1310px) {
+			margin-left: 225px;
+		}
 	}
 
 	&__jp {
-		flex: 0 0 100%;
-		max-width: 100%;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
 		position: relative;
 
-		@media (min-width: 1200px) {
+		@media (min-width: 768px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@media (min-width: 992px) {
 			flex: 0 0 495px;
 			max-width: 495px;
 		}
