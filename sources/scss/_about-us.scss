@@ -1,0 +1,41 @@
+.tg-about {
+  &__approach {
+    background: #F0F0F0;
+    &__tg-title-subtitle {
+      font-size: 22px;
+      padding-top: 0;
+      padding-left: 30px;
+      font-weight: 900;
+      &:before {
+        display: none;
+      }
+    }
+    .article {
+      .info {
+        min-height: 200px;
+      }
+    }
+  }
+  &__story {
+    .tg-info-block-one__text {
+      width: 100%;
+      max-width: 100%;
+    }
+    .tg-info-block-one__jp-img {
+      position: absolute;
+      width: 558px;
+      max-width: 558px;
+      right: -45px;
+      @media (max-width: 1200px) {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        right: 0;
+      }
+    }
+    .tg-info-block-one__jp-layout {
+      height: 417px;
+      background-image: url('../img/mask-6.png');
+    }
+  }
+}
