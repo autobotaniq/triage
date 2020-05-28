@@ -1,8 +1,8 @@
 <?php
 
 // Do not allow directly accessing this file.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit( 'Direct script access denied.' );
+if (!defined('ABSPATH')) {
+  exit('Direct script access denied.');
 }
 
 $acf_theme_footer_address = get_field('acf_theme_footer_address', 'option');
@@ -40,7 +40,8 @@ $acf_theme_footer_socials = get_field('acf_theme_footer_socials', 'option');
 
         <div class="row justify-content-center justify-content-lg-between align-items-center">
           <div class="col-lg-auto order-lg-1">
-            <nav class="tg-footer__nav-copyright" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+            <nav class="tg-footer__nav-copyright" itemscope itemtype="http://schema.org/SiteNavigationElement"
+                 role="navigation">
               <?php beyond_get_nav_menu('tg-footer__menu-copyright', 'tg-footer-menu-copyright-id', 'theme_menu_footer_copyright'); ?>
             </nav>
           </div>
@@ -56,8 +57,17 @@ $acf_theme_footer_socials = get_field('acf_theme_footer_socials', 'option');
   </div>
 </footer>
 
+<script type="text/javascript">
+  (function (d, t) {
+    var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    pp.src = '//app.pageproofer.com/overlay/js/5401/2888';
+    pp.type = 'text/javascript';
+    pp.async = true;
+    s.parentNode.insertBefore(pp, s);
+  })(document, 'script');
+</script>
 
-    <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 
 </html>

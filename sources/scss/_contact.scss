@@ -43,7 +43,6 @@
         width: 176px;
         color: #fff;
         line-height: 1.25;
-        font-family: "Source Sans Pro", sans-serif;
         z-index: 1;
       }
       .card-container {
@@ -75,9 +74,7 @@
             list-style: none;
             font-size: 20px;
             line-height: 22px;
-            b {
-              font-family: "Source Sans Pro", sans-serif;
-            }
+
             &.phone {
               font-weight: bold;
             }
