@@ -102,5 +102,98 @@ get_header();
 			</div>
 		</div>
 	</div>
+    <div class="tg-ready pt-40 pb-20">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-11">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xl-8 col-lg-7 text-white pb-30 pb-lg-0">
+                            <div class="f-size-lg-32 f-size-md-28 f-size-24 text-uppercase f-weight-700 text-center">Ready to elevate your operations?</div>
+                            <div class="f-size-lg-20 f-size-md-18 f-size-16 text-center text-lg-left "><p><strong>Let’s connect.</strong> Learn more about our software, solutions, and services—and discover how to put them to work for your organization.</p>
+                            </div>
+                            <div class="text-center pt-lg-30 pt-20">
+                                <a href="//localhost:9000/" class="tg-botton tg-botton_white">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 text-center">
+                            <img src="//localhost:9000/wp-content/uploads/2020/05/ready.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tg-about__partners-container pt-30 pb-20">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9">
+                    <div class="tg-title t-align-center t-transform-uppercase">Partners</div>
+                </div>
+                <div class="col-xl-9 py-30">
+                    <div class="f-size-lg-18 f-size-md-18 f-size-16 f-weight-300">
+                        <p>
+                            Triage Partners works with a variety of Fortune 100 companies to provide smart solutions and exceptional service to our clients. Get to know the companies we work with to help keep your business moving forward.
+                        </p>
+                    </div>
+                    <div class="partners">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logos/att.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="tg-about__news-container pt-30 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 block">
+                    <div class="tg-title tg-title__news t-transform-uppercase t-align-center">
+                        read TRIAGE partners in the news <br>
+                        <span class="tg-title__news__sub-title f-size-18 f-weight-400 t-transform-capitalize">View Our Case Studies</span>
+                    </div>
+                    <div class="tg-about__news-container__articles flex-wrap">
+                        <div class="article mt-25 mx-5">
+                            <div class="image"
+                                 style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
+                            </div>
+                            <div class="info py-5 px-10">
+                                <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
+                                <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
+                            </div>
+                        </div>
+                        <div class="article mt-25 mx-5">
+                            <div class="image"
+                                 style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
+                            </div>
+                            <div class="info py-5 px-10">
+                                <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
+                                <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
+                            </div>
+                        </div>
+                        <div class="article mt-25 mx-5">
+                            <div class="image"
+                                 style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
+                            </div>
+                            <div class="info py-5 px-10">
+                                <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
+                                <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>

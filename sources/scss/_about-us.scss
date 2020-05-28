@@ -38,4 +38,62 @@
       background-image: url('../img/mask-6.png');
     }
   }
+  &__partners-container {
+    .tg-title {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      img {
+        width: 176px;
+        padding: 20px 15px;
+        margin: 25px 5px;
+        justify-content: center;
+        border: 2px solid #ec0127;
+        box-shadow: 0 3px 10px 0 rgba(0,0,0,.35);
+      }
+    }
+  }
+  &__news-container {
+    background-image: url('../img/mask-6.png');
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 500px;
+    .block {
+      margin: 0 auto;
+      .tg-title__news {
+        color: #fff;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &__articles {
+      display: flex;
+      justify-content: space-around;
+      .article {
+        .image {
+          width: 240px;
+          height: 185px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top center;
+        }
+        .info {
+          background: #fff;
+          a {
+            color: #EC0127 !important;
+          }
+        }
+      }
+    }
+  }
 }
