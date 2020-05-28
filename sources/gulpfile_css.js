@@ -20,7 +20,7 @@ module.exports = function (gulp, plugins, getFolders, mobileSettings) {
       .pipe(plugins.if(!mobileSettings, plugins.sourcemaps.init()))
       .pipe(plugins.sass({includePaths: ['./scss/']}))
       .pipe(plugins.autoprefixer())
-      .pipe(plugins.if(mobileSettings, plugins.combineMq({beautify: false})))
+      //.pipe(plugins.if(mobileSettings, plugins.combineMq({beautify: false})))
       .pipe(plugins.changedInPlace({firstPass: true}))
       .pipe(plugins.csso())
       .pipe(plugins.if(!mobileSettings, plugins.sourcemaps.write('./maps')))

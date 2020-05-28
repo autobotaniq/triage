@@ -1,0 +1,89 @@
+.tg-contact {
+  &__form-container {
+    width: 100%;
+    height: 521px;
+    border: 1px solid #707070;
+    @media (max-width: 992px) {
+      padding: 0 15px;
+    }
+    &__form {
+      border: 1px solid red;
+      min-height: 365px;
+      @media (min-width: 992px) {
+        margin: 0 30px;
+      }
+      @media (min-width: 1200px) {
+        margin: 0 45px;
+      }
+    }
+  }
+  &__locations-container {
+    background-color: #d8d9d9;
+    background-image: url('../img/location/data_lines_2.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+  &__locations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
+    &__city {
+      width: 31%;
+      min-width: 331px;
+      @media screen and (max-width: 425px) {
+        max-width: 312px;
+        min-width: 280px;
+      }
+      .name {
+        background: #EC0127;
+        position: absolute;
+        width: 176px;
+        color: #fff;
+        line-height: 1.25;
+        font-family: "Source Sans Pro", sans-serif;
+        z-index: 1;
+      }
+      .card-container {
+        display: flex;
+        min-height: 350px;
+        border: 1px solid #707070;
+        background: #fff;
+        .image {
+          height: 185px;
+          width: 100%;
+          background-repeat: no-repeat;
+          position: relative;
+          display: flex;
+          align-items: center;
+          background-size: auto;
+          background-position: center;
+          .fpo {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: #FF00D8;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff;
+          }
+        }
+        .info {
+          height: 185px;
+          li {
+            list-style: none;
+            font-size: 20px;
+            line-height: 22px;
+            b {
+              font-family: "Source Sans Pro", sans-serif;
+            }
+            &.phone {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
