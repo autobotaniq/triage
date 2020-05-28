@@ -144,3 +144,215 @@
 		}
 	}
 }
+
+.tg-process {
+	position: relative;
+
+	@media (min-width: 1200px) {
+		min-height: 480px;
+	}
+
+	.container,
+	.row {
+		min-height: inherit;
+	}
+
+	&__item {
+		text-align: center;
+
+		@media (min-width: 1200px) {
+			max-width: 470px;
+			margin-left: auto;
+		}
+	}
+
+	&__image {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		display: none;
+
+		@media (min-width: 1200px) {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 583px;
+			height: auto;
+			display: block;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 8;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			background-image: url(../img/mask-9.png);
+		}
+	}
+}
+
+.tg-partners {
+	background-color: $brand-secondary-lite;
+	position: relative;
+
+	&__lists {
+
+		.container {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		.row {
+			margin-right: -20px;
+			margin-left: -20px;
+		}
+
+		.col,
+		[class*="col-"] {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__thumb {
+		position: relative;
+
+		img {
+			position: relative;
+			z-index: 9;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			background-color: $brand-primary;
+			display: none;
+
+			@media (min-width: 992px) {
+				display: block;
+			}
+		}
+
+		&_ov-1 {
+			&:before {
+				width: 95px;
+				height: 100%;
+				left: -20px;
+				bottom: -20px;
+			}
+		}
+		&_ov-2 {
+			&:before {
+				height: 77px;
+				top: -20px;
+				right: -20px;
+				left: -20px;
+			}
+		}
+		&_ov-3 {
+			&:before {
+				width: 95px;
+				height: 100%;
+				right: -20px;
+				bottom: -20px;
+			}
+		}
+		&_ov-4 {
+			&:before {
+				width: 95px;
+				height: 100%;
+				left: -20px;
+				top: -20px;
+			}
+		}
+		&_ov-5 {
+			&:before {
+				height: 77px;
+				bottom: -20px;
+				right: -20px;
+				left: -20px;
+			}
+		}
+		&_ov-6 {
+			&:before {
+				width: 95px;
+				height: 100%;
+				right: -20px;
+				top: -20px;
+			}
+		}
+	}
+}
+
+.tg-template-ready {
+	position: relative;
+
+	&__top {
+		position: relative;
+		background-color: $brand-primary;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(../img/mask-6.png);
+		padding: 40px 0;
+
+		@media (min-width: 992px) {
+			min-height: 480px;
+			padding: 0;
+		}
+
+		.container,
+		.row {
+			min-height: inherit;
+		}
+	}
+
+	&__title {
+		color: #ffffff;
+		text-align: center;
+
+		@media (min-width: 992px) {
+			max-width: 600px;
+		}
+
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 859px;
+		z-index: 1;
+		display: none;
+		overflow: hidden;
+
+		@media (min-width: 992px) {
+			display: block;
+		}
+
+		&-layer {
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url(../img/mask-data-1.png);
+			position: relative;
+			bottom: -3px;
+		}
+	}
+}

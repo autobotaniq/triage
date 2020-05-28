@@ -51,7 +51,8 @@ if (!class_exists('Beyond_Init')) :
 
       /* Filter */
       //add_filter('acf/settings/show_admin', '__return_false'); // Hide ACF field group menu item
-      add_filter('big_image_size_threshold', '__return_false');
+      //add_filter('big_image_size_threshold', '__return_false');
+      add_filter('wpcf7_autop_or_not', '__return_false');
       add_filter('use_block_editor_for_post', '__return_false', 5);
       if (!$this->woocommerce_styles) {
         add_filter('woocommerce_enqueue_styles', '__return_empty_array');
@@ -164,6 +165,7 @@ if (!class_exists('Beyond_Init')) :
       add_image_size('info_block_one', 856, 692, true);
       add_image_size('info_expert', 888, 316, true);
       add_image_size('bg_page', 1000, 99999);
+      add_image_size('tumb_partners', 600, 450, true);
     }
 
     /**

@@ -9,7 +9,12 @@ if (!defined('ABSPATH')) {
 }
 
 get_header();
+
+$tg_contact_form = get_field('tg_contact_form');
+$tg_contact_locations = get_field('tg_contact_locations');
+
 ?>
+
   <div class="tg-contact mt-20">
     <div class="container">
       <div class="row justify-content-center">
@@ -19,9 +24,7 @@ get_header();
               Let’s connect.
             </div>
             <div class="tg-contact__form my-25">
-              <form action="">
-
-              </form>
+              <?php echo do_shortcode($tg_contact_form) ?>
             </div>
           </div>
         </div>
@@ -32,121 +35,27 @@ get_header();
         <div class="tg-title">
           LOCATIONS
         </div>
+
         <div class="tg-contact__locations">
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
+
+          <?php if (!empty($tg_contact_locations)) {
+            foreach ($tg_contact_locations as $location) { ?>
+              <div class="tg-contact__locations__city mt-35">
+                <div class="name text-uppercase py-10 pl-15 f-size-22 f-weight-500">
+                  <?php echo $location['title'] ?>
+                </div>
+                <div class="flex-column card-container ml-30 mt-15">
+                  <div class="image"
+                       style="background-image: url(<?php echo $location['thumbnail']['sizes']['tumb_partners'] ?>)">
+                  </div>
+                  <div class="info">
+                    <?php echo $location['text'] ?>
+                  </div>
+                </div>
               </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
-              </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
-              </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
-              </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
-              </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tg-contact__locations__city mt-35">
-            <div class="name t-transform-uppercase py-10 pl-15 f-size-22 f-weight-500">
-              FLORIDA
-            </div>
-            <div class="flex-column card-container ml-30 mt-15">
-              <div class="image"
-                   style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/location/loc-1.png')">
-                <span class="fpo t-align-center t-transform-uppercase f-size-60 f-weight-700">fbo</span>
-              </div>
-              <div class="info pt-5">
-                <ul>
-                  <li><b>Corporate Office</b></li>
-                  <li>1715 North Westshore Blvd. Suite 250</li>
-                  <li>Tampa, FL 33607</li>
-                  <li class="phone pt-50">(813) 801-9869</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            <?php }
+          } ?>
+
         </div>
       </div>
     </div>
