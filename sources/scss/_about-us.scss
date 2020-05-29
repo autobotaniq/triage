@@ -1,99 +1,128 @@
 .tg-about {
-  &__approach {
-    background: #F0F0F0;
-    &__tg-title-subtitle {
-      font-size: 22px;
-      padding-top: 0;
-      padding-left: 30px;
-      font-weight: 900;
-      &:before {
-        display: none;
-      }
-    }
-    .article {
-      .info {
-        min-height: 200px;
-      }
-    }
-  }
-  &__story {
-    .tg-info-block-one__text {
-      width: 100%;
-      max-width: 100%;
-    }
-    .tg-info-block-one__jp-img {
-      position: absolute;
-      width: 558px;
-      max-width: 558px;
-      right: -45px;
-      @media (max-width: 1200px) {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-        right: 0;
-      }
-    }
-    .tg-info-block-one__jp-layout {
-      height: 417px;
-      background-image: url('../img/mask-6.png');
-    }
-  }
-  &__partners-container {
-    .tg-title {
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .partners {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      img {
-        width: 176px;
-        padding: 20px 15px;
-        margin: 25px 5px;
-        justify-content: center;
-        border: 2px solid #ec0127;
-        box-shadow: 0 3px 10px 0 rgba(0,0,0,.35);
-      }
-    }
-  }
-  &__news-container {
-    background-image: url('../img/mask-6.png');
-    background-color: red;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 500px;
-    .block {
-      margin: 0 auto;
-      .tg-title__news {
-        color: #fff;
-        margin-left: 0;
-        padding-left: 0;
-        text-align: center;
-        &:before {
-          display: none;
-        }
-      }
-    }
-    &__articles {
-      display: flex;
-      justify-content: space-around;
-      .article {
-        .image {
-          width: 240px;
-          height: 185px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: top center;
-        }
-        .info {
-          background: #fff;
-          a {
-            color: #EC0127 !important;
-          }
-        }
-      }
-    }
-  }
+	&__approach {
+		background: $brand-secondary-lite;
+
+		&__tg-title-subtitle {
+			font-size: 22px;
+			padding-top: 0;
+			padding-left: 30px;
+			font-weight: 900;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.article {
+			.info {
+				min-height: 200px;
+				background-color: #ffffff;
+			}
+		}
+	}
+
+	&__story {
+		.tg-info-block-one__text {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.tg-info-block-one__jp-img {
+			position: absolute;
+			width: 558px;
+			max-width: 558px;
+			right: -45px;
+			@media (max-width: 1200px) {
+				position: relative;
+				width: 100%;
+				max-width: 100%;
+				right: 0;
+			}
+		}
+
+		.tg-info-block-one__jp-layout {
+			height: 417px;
+			background-image: url('../img/mask-6.png');
+		}
+	}
+
+	&__partners-container {
+		.tg-title {
+			width: fit-content;
+			margin: 0 auto;
+		}
+
+		.tg-about-partners {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			&__item {
+				width: 176px;
+				height: 104px;
+				margin: 25px 5px;
+				justify-content: center;
+				border: 2px solid $brand-primary;
+				box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .35);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 90%;
+			}
+			/*img {
+				width: 176px;
+				padding: 20px 15px;
+				margin: 25px 5px;
+				justify-content: center;
+				border: 2px solid $brand-primary;
+				box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .35);
+			}*/
+		}
+	}
+
+	&__news-container {
+		background-image: url('../img/mask-6.png');
+		background-color: $brand-primary;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		min-height: 500px;
+
+		.block {
+			margin: 0 auto;
+
+			.tg-title__news {
+				color: #fff;
+				margin-left: 0;
+				padding-left: 0;
+				text-align: center;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		&__articles {
+			display: flex;
+			justify-content: space-around;
+
+			.article {
+				.image {
+					width: 240px;
+					height: 185px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: top center;
+				}
+
+				.info {
+					background: #fff;
+
+					a {
+						color: $brand-primary !important;
+					}
+				}
+			}
+		}
+	}
 }
