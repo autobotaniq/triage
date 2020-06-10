@@ -3,6 +3,9 @@
 .tg-panel-solution {
 	position: relative;
 	background-color: $brand-secondary-lite;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 
 	&_revers {
 		background-color: $brand-secondary;
@@ -127,7 +130,8 @@
 		height: 100%;
 
 		img {
-			max-width: 200px;
+			//max-width: 200px;
+			max-height: 82px;
 		}
 
 		&-text {
@@ -206,19 +210,25 @@
 	&__lists {
 
 		.container {
-			padding-right: 20px;
-			padding-left: 20px;
+			@media (min-width: 992px) {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
 		}
 
 		.row {
-			margin-right: -20px;
-			margin-left: -20px;
+			@media (min-width: 992px) {
+				margin-right: -20px;
+				margin-left: -20px;
+			}
 		}
 
 		.col,
 		[class*="col-"] {
-			padding-right: 20px;
-			padding-left: 20px;
+			@media (min-width: 992px) {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
 		}
 	}
 

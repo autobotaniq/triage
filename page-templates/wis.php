@@ -20,7 +20,7 @@ $tg_software_solution_1_blocks = get_field('tg_software_solution_1_blocks');
 ?>
   <div class="tg-panel-solution pb-lg-60 pb-35">
 
-    <div class="tg-panel-solution__top">
+    <div class="tg-panel-solution__top order-2 order-lg-1">
       <div class="d-flex flex-wrap justify-content-between align-items-start">
         <div class="tg-panel-solution__text">
           <div class="brand-primary-color f-size-lg-22 f-size-18 text-uppercase">
@@ -47,11 +47,11 @@ $tg_software_solution_1_blocks = get_field('tg_software_solution_1_blocks');
       </div>
     </div>
 
-    <div class="container pt-lg-40 pt-25">
+    <div class="container pt-lg-40 pt-25 order-1 order-lg-2">
       <div class="row justify-content-center">
         <div class="col-xl-10">
 
-          <div class="row">
+          <div class="row justify-content-center">
             <?php
             if (!empty($tg_software_solution_1_blocks)) {
               foreach ($tg_software_solution_1_blocks as $tg_software_block) { ?>
@@ -118,7 +118,7 @@ $tg_software_solution_2_blocks = get_field('tg_software_solution_2_blocks');
       <div class="row justify-content-center">
         <div class="col-xl-10">
 
-          <div class="row">
+          <div class="row justify-content-center">
             <?php
             if (!empty($tg_software_solution_2_blocks)) {
               foreach ($tg_software_solution_2_blocks as $tg_software_block) { ?>

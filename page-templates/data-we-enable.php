@@ -23,10 +23,8 @@ $tg_dwe_double_block = get_field('tg_dwe_double_block');
 
           <div class="tg-double-block__container">
             <div class="row">
-              <?php
-              if (!empty($tg_dwe_double_block)) {
-                foreach ($tg_dwe_double_block as $double_block) {
-                  ?>
+              <?php if (!empty($tg_dwe_double_block)) {
+                foreach ($tg_dwe_double_block as $double_block) { ?>
                   <div class="col-md-6 py-md-0 py-20">
                     <div class="tg-double-block__item">
                       <div class="f-size-lg-42 f-size-md-36 f-size-30 f-weight-700 l-height-110 mb-15">

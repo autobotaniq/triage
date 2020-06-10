@@ -67,7 +67,7 @@ $tg_subtitle = get_field('tg_subtitle');
 $tg_image = get_field('tg_image');
 $tg_description = get_field('tg_description');
 
-if (!empty($tg_subtitle) && !empty($tg_image) && !empty($tg_description)) { ?>
+if (!empty($tg_subtitle)) { ?>
 <div class="tg-breadcrumbs">
 
   <div class="tg-breadcrumbs__top">
@@ -75,7 +75,7 @@ if (!empty($tg_subtitle) && !empty($tg_image) && !empty($tg_description)) { ?>
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-9">
           <div class="tg-breadcrumbs__title">
-            <h1 class="f-size-xl-42 f-size-lg-38 f-size-md-34 f-size-sm-28 f-size-26 text-uppercase l-height-110 mb-10">
+            <h1 class="f-size-xl-42 f-size-lg-38 f-size-md-34 f-size-28 text-uppercase l-height-110 mb-10">
               <?php the_title() ?>
             </h1>
             <h2 class="f-size-lg-26 f-size-md-22 f-size-sm-20 f-size-18 f-weight-400 pt-0 mb-0"><?php echo $tg_subtitle ?></h2>
@@ -91,16 +91,19 @@ if (!empty($tg_subtitle) && !empty($tg_image) && !empty($tg_description)) { ?>
     </div>
   </div>
 
-  <div class="tg-breadcrumbs__description py-lg-50 py-30">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="f-size-lg-18 f-size-md-16 f-size-15 f-weight-300">
-            <?php echo $tg_description ?>
+  <?php if (!empty($tg_description)) { ?>
+    <div class="tg-breadcrumbs__description py-lg-50 py-30">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="f-size-lg-18 f-size-md-16 f-size-15 f-weight-300">
+              <?php echo $tg_description ?>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <?php } ?>
+
 </div>
 <?php } ?>

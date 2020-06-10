@@ -14,20 +14,110 @@ get_header();
 
 
 <?php
-$tg_hp_background = get_field('tg_hp_background');
-$tg_hp_heading = get_field('tg_hp_heading');
-$tg_hp_text = get_field('tg_hp_text');
+$tg_hp_slider = get_field('tg_hp_slider');
 ?>
-  <div class="tg-tie-block py-50"
-       style="background-image:url(<?php echo esc_url($tg_hp_background['url']) ?>);">
-    <div class="container">
 
-      <h1 class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 mb-0 text-uppercase">
-        <?php echo $tg_hp_heading; ?></h1>
+  <div class="tg-header-slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <?php
+        if (!empty($tg_hp_slider)) {
+          foreach ($tg_hp_slider as $slide) {
+            switch ($slide['versions']) {
+              case 'v1': ?>
+                <div class="swiper-slide">
+                  <div class="tg-header-slider__item tg-header-slider__item_v1"
+                       style="background-image:url(<?php echo esc_url($slide['version_1']['background']['url']) ?>);">
 
-      <div class="f-size-xl-42 f-size-lg-38 f-size-md-30 f-size-26 l-height-110 pt-lg-50 pt-35 mt-lg-5">
-        <?php echo $tg_hp_text; ?>
+                    <div class="container">
+                      <h1 class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 mb-0 text-uppercase">
+                        <?php echo $slide['version_1']['heading']; ?>
+                      </h1>
+
+                      <div class="f-size-xl-42 f-size-lg-38 f-size-md-30 f-size-26 l-height-110 pt-lg-50 pt-35 mt-lg-5">
+                        <?php echo $slide['version_1']['text']; ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <?php break;
+              case 'v2': ?>
+                <div class="swiper-slide">
+                  <div class="swiper-slide">
+                    <div class="tg-header-slider__item tg-header-slider__item_v2"
+                         style="background-image:url(<?php echo esc_url($slide['version_2']['background']['url']) ?>);">
+
+                      <div class="container">
+                        <h1 class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 mb-30 text-uppercase">
+                          <?php echo $slide['version_2']['heading']; ?>
+                        </h1>
+
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="tg-header-slider__item-section">
+                              <img src="<?php echo esc_url($slide['version_2']['section_1']['url']) ?>"
+                                   alt="<?php echo esc_attr($slide['version_2']['heading']) ?>">
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="tg-header-slider__item-section">
+                              <img src="<?php echo esc_url($slide['version_2']['section_2']['url']) ?>"
+                                   alt="<?php echo esc_attr($slide['version_2']['heading']) ?>">
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="tg-header-slider__item-section">
+                              <img src="<?php echo esc_url($slide['version_2']['section_3']['url']) ?>"
+                                   alt="<?php echo esc_attr($slide['version_2']['heading']) ?>">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="f-size-lg-26 f-size-sm-22 f-size-18 l-height-110 pt-lg-40 pt-30">
+                          <?php echo $slide['version_2']['text']; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <?php break;
+              case 'v3': ?>
+                <div class="swiper-slide">
+                  <div class="tg-header-slider__item tg-header-slider__item_v3"
+                       style="background-image:url(<?php echo esc_url($slide['version_3']['background']['url']) ?>);">
+
+                    <div class="container">
+                      <div class="row justify-content-lg-between justify-content-center mb-lg-200 mb-30">
+                        <div class="col-auto">
+                          <div class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 f-weight-700 text-uppercase">
+                            <?php echo $slide['version_3']['heading_left']; ?>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 f-weight-700 text-uppercase">
+                            <?php echo $slide['version_3']['heading_center']; ?>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="f-size-xl-50 f-size-lg-46 f-size-md-40 f-size-34 l-height-110 f-weight-700 text-uppercase">
+                            <?php echo $slide['version_3']['heading_right']; ?>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="f-size-lg-26 f-size-sm-22 f-size-18 l-height-110 pb-xl-50">
+                        <?php echo $slide['version_3']['text']; ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <?php break;
+            }
+          }
+        } ?>
       </div>
+
+      <div class="tg-swiper-pagination"></div>
     </div>
   </div>
 
@@ -97,7 +187,7 @@ $tg_hp_help_link = get_field('tg_hp_help_link');
             } ?>
           </div>
 
-          <div class="text-center pt-lg-40 pt-30">
+          <div class="text-center pt-lg-40 pt-20">
             <?php
             $target = ($tg_hp_help_link['target'] === '_blank') ? 'target="_blank"' : '';
             echo '<a href="' . $tg_hp_help_link['url'] . '" class="tg-botton tg-botton_dark" ' . $target . '>' . $tg_hp_help_link['title'] . '</a>'
@@ -127,11 +217,11 @@ $tg_hp_explore_link = get_field('tg_hp_explore_link');
             <?php echo $tg_hp_explore_description ?>
           </div>
 
-          <div class="row justify-content-center">
+          <div class="row justify-content-center d-md-flex d-none">
             <?php
             if (!empty($tg_hp_explore_sub_brands)) {
               foreach ($tg_hp_explore_sub_brands as $sub_brands) { ?>
-                <div class="col-md-3 col-6 py-15">
+                <div class="col-md-4 col-6 py-15">
                   <div class="tg-explore__item">
                     <div class="tg-explore__icon">
                       <div class="tg-explore__icon-img"
@@ -152,15 +242,47 @@ $tg_hp_explore_link = get_field('tg_hp_explore_link');
             } ?>
           </div>
 
-          <div class="text-center pt-lg-40 pt-30">
-            <?php
-            $target = ($tg_hp_explore_link['target'] === '_blank') ? 'target="_blank"' : '';
-            echo '<a href="' . $tg_hp_explore_link['url'] . '" class="tg-botton tg-botton_white" ' . $target . '>' . $tg_hp_explore_link['title'] . '</a>'
-            ?>
-          </div>
         </div>
       </div>
     </div>
+
+
+    <div class="tg-explore-slider d-md-none pt-30 pb-15">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <?php
+          if (!empty($tg_hp_explore_sub_brands)) {
+            foreach ($tg_hp_explore_sub_brands as $sub_brands) { ?>
+              <div class="swiper-slide tg-explore__item">
+                <div class="tg-explore__icon">
+                  <div class="tg-explore__icon-img"
+                       style="background-image:url(<?php echo esc_url($sub_brands['icon']['url']) ?>);"></div>
+                </div>
+
+                <div class="tg-explore__logo">
+                  <img src="<?php echo esc_url($sub_brands['logo']['url']) ?>"
+                       alt="">
+                </div>
+
+                <div class="tg-explore__text">
+                  <?php echo $sub_brands['text'] ?>
+                </div>
+              </div>
+            <?php }
+          } ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-center pt-lg-40 pt-30">
+        <?php
+        $target = ($tg_hp_explore_link['target'] === '_blank') ? 'target="_blank"' : '';
+        echo '<a href="' . $tg_hp_explore_link['url'] . '" class="tg-botton tg-botton_white" ' . $target . '>' . $tg_hp_explore_link['title'] . '</a>'
+        ?>
+      </div>
+    </div>
+
   </div>
 
 
@@ -215,36 +337,36 @@ $tg_hp_ready_description = get_field('tg_hp_ready_description');
 $tg_hp_ready_link = get_field('tg_hp_ready_link');
 $tg_hp_ready_img = get_field('tg_hp_ready_img');
 ?>
-<div class="tg-ready pt-30 pb-20">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-11">
+  <div class="tg-ready pt-30 pb-20">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-11">
 
-        <div class="row justify-content-between align-items-center">
-          <div class="col-xl-8 col-lg-7 text-white pb-30 pb-lg-0">
-            <div class="f-size-lg-32 f-size-md-28 f-size-24 text-uppercase f-weight-700 text-center">
-              <?php echo $tg_hp_ready_title ?>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-xl-8 col-lg-7 text-white pb-30 pb-lg-0">
+              <div class="f-size-lg-32 f-size-md-28 f-size-24 text-uppercase f-weight-700 text-center">
+                <?php echo $tg_hp_ready_title ?>
+              </div>
+
+              <div class="f-size-lg-20 f-size-md-18 f-size-16 text-center text-lg-left "><?php echo $tg_hp_ready_description ?></div>
+
+              <div class="text-center pt-lg-30 pt-20">
+                <?php
+                $target = ($tg_hp_ready_link['target'] === '_blank') ? 'target="_blank"' : '';
+                echo '<a href="' . $tg_hp_ready_link['url'] . '" class="tg-botton tg-botton_white" ' . $target . '>' . $tg_hp_ready_link['title'] . '</a>'
+                ?>
+              </div>
             </div>
 
-            <div class="f-size-lg-20 f-size-md-18 f-size-16 text-center text-lg-left "><?php echo $tg_hp_ready_description ?></div>
-
-            <div class="text-center pt-lg-30 pt-20">
-              <?php
-              $target = ($tg_hp_ready_link['target'] === '_blank') ? 'target="_blank"' : '';
-              echo '<a href="' . $tg_hp_ready_link['url'] . '" class="tg-botton tg-botton_white" ' . $target . '>' . $tg_hp_ready_link['title'] . '</a>'
-              ?>
+            <div class="col-xl-4 col-lg-5 text-center">
+              <img src="<?php echo esc_url($tg_hp_ready_img['url']) ?>" alt="">
             </div>
           </div>
 
-          <div class="col-xl-4 col-lg-5 text-center">
-            <img src="<?php echo esc_url($tg_hp_ready_img['url']) ?>" alt="">
-          </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
 
 <?php get_footer(); ?>

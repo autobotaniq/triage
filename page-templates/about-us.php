@@ -63,21 +63,23 @@ get_header();
         </div>
       </div>
 
-      <div class="tg-info-block-one pb-40">
-        <div class="d-flex flex-wrap justify-content-between">
-          <div class="tg-info-block-one__text">
-            <div class="f-size-lg-30 f-size-md-26 f-size-22 f-weight-700 l-height-110 mb-15 ">
-              <?php echo $tg_about_story_title ?>
+
+      <div class="tg-about__story-container">
+        <div class="tg-info-block-one py-30">
+          <div class="d-flex flex-wrap justify-content-between">
+            <div class="tg-info-block-one__text">
+              <div class="f-size-lg-30 f-size-md-26 f-size-22 f-weight-700 l-height-110 mb-15 ">
+                <?php echo $tg_about_story_title ?>
+              </div>
             </div>
-          </div>
-          <div class="tg-info-block-one__jp">
-            <div class="tg-info-block-one__jp-img">
-              <img src="<?php echo esc_url($tg_about_story_img['sizes']['bg_page']) ?>" alt="">
-            </div>
-            <div class="tg-info-block-one__jp-layout"></div>
           </div>
         </div>
+
+        <img class="tg-about__story-img" src="<?php echo esc_url($tg_about_story_img['sizes']['bg_page']) ?>" alt="">
       </div>
+
+
+
 
       <div class="container">
         <div class="row justify-content-center">
@@ -131,48 +133,5 @@ get_header();
       </div>
     </div>
 
-    <?php /* ?>
-    <div class="tg-about__news-container pt-30 pb-20">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 block">
-            <div class="tg-title tg-title__news t-transform-uppercase t-align-center">
-              read TRIAGE partners in the news <br>
-              <span class="tg-title__news__sub-title f-size-18 f-weight-400 t-transform-capitalize">View Our Case Studies</span>
-            </div>
-            <div class="tg-about__news-container__articles flex-wrap">
-              <div class="article mt-25 mx-5">
-                <div class="image"
-                     style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
-                </div>
-                <div class="info py-5 px-10">
-                  <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
-                  <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
-                </div>
-              </div>
-              <div class="article mt-25 mx-5">
-                <div class="image"
-                     style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
-                </div>
-                <div class="info py-5 px-10">
-                  <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
-                  <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
-                </div>
-              </div>
-              <div class="article mt-25 mx-5">
-                <div class="image"
-                     style="background-image: url('<?php bloginfo('template_url'); ?>/assets/img/news.jpg')">
-                </div>
-                <div class="info py-5 px-10">
-                  <h1 class="f-size-20 t-transform-uppercase pb-30">Title</h1>
-                  <a href="#" class="rd-more t-transform-uppercase f-weight-700">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <?php */ ?>
   </div>
 <?php get_footer(); ?>

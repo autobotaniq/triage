@@ -4,9 +4,14 @@
 	min-height: 96px;
 	position: relative;
 	z-index: 9999;
+	background-color: #ffffff;
 
 	@media (min-width: 992px) {
 		min-height: 150px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 	.container,
@@ -133,7 +138,7 @@
 
 	&__mobile-nav-search {
 		display: none;
-		flex-direction: column;
+		//flex-direction: column;
 		flex-wrap: wrap;
 		padding: 25px 20px;
 		z-index: 9999;
@@ -143,11 +148,12 @@
 		}
 
 		&.active-nav {
-			display: flex;
+			display: block;
 			position: absolute;
 			top: 100%;
 			left: 0;
-			right: 0;
+			width: 100%;
+			height: calc(100vh - 96px);
 			background-color: $brand-primary;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -161,24 +167,26 @@
 	}
 
 	&__mobile-menu {
-		flex: 0 0 100%;
-		max-width: 100%;
+		width: 100%;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
-		align-items: flex-end;
-		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-start;
 
 		li {
-
+			flex: 0 0 100%;
+			max-width: 100%;
+			text-align: right;
 		}
 
 		a {
 			font-size: rem(18);
-			line-height: 2.2;
+			line-height: 3;
 			color: #ffffff;
 			font-weight: 700;
+			display: inline-block;
 
 			&:hover {
 				color: #fff;

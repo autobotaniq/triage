@@ -174,70 +174,190 @@
     background-repeat: no-repeat;
     background-position: bottom left;
   }
+}
 
-  &__locations {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
-    @media (max-width: 767px) {
-      justify-content: center;
-    }
+.tg-location {
 
-    &__city {
-      width: 31%;
-      min-width: 331px;
+	&-map {
+		max-width: 870px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 50;
+		display: none;
 
-      @media (max-width: 425px) {
-        max-width: 312px;
-        min-width: 280px;
-      }
+		@media (min-width: 992px) {
+			display: block;
+		}
 
-      .name {
-        background: #EC0127;
-        position: absolute;
-        width: 176px;
-        color: #fff;
-        line-height: 1.25;
-        z-index: 1;
-      }
+		img {
+			position: relative;
+			width: 100%;
+			z-index: 0;
+		}
+		
+		&__marker {
+			position: absolute;
+			z-index: 1;
 
-      .card-container {
-        display: flex;
-        min-height: 350px;
-        border: 1px solid #707070;
-        background: #fff;
+			&.marker-active {
+				z-index: 52;
 
-        .image {
-          height: 185px;
-          width: 100%;
-          background-repeat: no-repeat;
-          position: relative;
-          display: flex;
-          align-items: center;
-          background-size: auto;
-          background-position: center;
-        }
+				.tg-location-map__marker-icon {
+					width: 56px;
+					height: 80px;
+				}
 
-        .info {
-          min-height: 185px;
-					padding: 20px;
+				.tg-location-map__marker-popup {
+					display: block;
+				}
+			}
 
-					a {
-						color: #000000;
+			&.tg-florida-tampa {
+				bottom: 77px;
+				left: 685px;
+			}
+			&.tg-california-paramount {
+				bottom: 205px;
+				left: 70px;
+			}
+			&.tg-california-palm-desert {
+				bottom: 220px;
+				left: 105px;
+			}
+			&.tg-california-ontario {
+				bottom: 240px;
+				left: 42px;
+			}
+			&.tg-california-rancho-cucamonga {
+				bottom: 267px;
+				left: 70px;
+			}
+			&.tg-illinois-edwardsville {
+				top: 185px;
+				left: 530px;
+			}
+			&.tg-texas-grapevine {
+				bottom: 145px;
+				left: 400px;
+			}
+
+			&-icon {
+				width: 44px;
+				height: 66px;
+				position: relative;
+				z-index: 7;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+				background-image: url(../img/triage_locations.png);
+				cursor: pointer;
+				transition: all .2s;
+				
+				&.red-icon {
+					background-image: url(../img/triage_corp.png);
+				}
+			}
+
+			&-popup {
+				position: absolute;
+				z-index: 1;
+				top: 20px;
+				left: 0;
+				display: none;
+			}
+
+				&-state {
+					height: 44px;
+					background-color: $brand-primary;
+					padding-left: 40px;
+					padding-right: 50px;
+					margin-left: 30px;
+					line-height: 44px;
+					font-size: rem(22);
+					text-transform: uppercase;
+					color: #ffffff;
+					font-weight: 500;
+					display: inline-block;
+					position: relative;
+					z-index: 3;
+					-webkit-clip-path: polygon(0px 0px, 100% 0px, 85% 100%, 0px 100%);
+					clip-path: polygon(0px 0px, 100% 0px, 85% 100%, 0px 100%);
+				}
+
+				&-address {
+					background-color: #ffffff;
+					border-radius: 10px;
+					padding: 20px 30px;
+					font-size: rem(15);
+					box-shadow: 0 3px 4px rgba(#000, .25);
+					min-width: 250px;
+
+					p {
+						margin-bottom: 8px;
 					}
+				}
+		}
+	}
 
-          li {
-            list-style: none;
-            font-size: 20px;
-            line-height: 22px;
+	&-item {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 208px;
+		padding: 10px 0;
 
-            &.phone {
-              font-weight: bold;
-            }
-          }
-        }
-      }
-    }
-  }
+		@media (min-width: 992px) {
+			cursor: pointer;
+			padding: 10px 0 50px;
+		}
+		
+		&.item-active {
+			.tg-location-item__state {
+				background-color: $brand-hover-link;
+			}
+		}
+
+		&__state {
+			height: 34px;
+			background-color: $brand-primary;
+			padding-left: 15px;
+			padding-right: 50px;
+			line-height: 34px;
+			font-size: rem(20);
+			text-transform: uppercase;
+			color: #ffffff;
+			font-weight: 500;
+			display: inline-block;
+			position: relative;
+			z-index: 3;
+			-webkit-clip-path: polygon(0px 0px, 100% 0px, 85% 100%, 0px 100%);
+			clip-path: polygon(0px 0px, 100% 0px, 85% 100%, 0px 100%);
+		}
+
+		&__city {
+			background-color: #ffffff;
+			border-radius: 6px;
+			line-height: 20px;
+			min-height: 52px;
+			padding: 20px 10px 10px;
+			font-size: rem(18);
+			border: 1px solid $brand-hover-link;
+			box-shadow: 0 3px 4px rgba(#000, .25);
+			margin-left: 20px;
+			margin-top: -13px;
+
+			@media (min-width: 992px) {
+				margin-left: 0;
+				margin-top: 0;
+				position: absolute;
+				top: 30px;
+				left: 20px;
+				right: 0;
+				z-index: 1;
+				padding: 20px 10px 0;
+			}
+		}
+	}
 }

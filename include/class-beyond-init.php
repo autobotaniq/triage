@@ -87,6 +87,7 @@ if (!class_exists('Beyond_Init')) :
 
       wp_enqueue_style('roboto', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', array(), false, 'all');
       wp_enqueue_style('bootstrap', B_STYLE_URL . '/assets/css/bootstrap.css', array(), false, 'all');
+      wp_enqueue_style('swiper', B_STYLE_URL . '/assets/vendor/swiper/css/swiper.min.css', array(), false, 'all');
 
       wp_enqueue_style('theme-style', self::$stylesheet_uri, array(), B_VERSION, 'all');
 
@@ -100,6 +101,7 @@ if (!class_exists('Beyond_Init')) :
 
       wp_enqueue_script('jquery');
 
+      wp_enqueue_script('swiper', B_TEMP_URL . '/assets/vendor/swiper/js/swiper.min.js', array('jquery'), B_VERSION, true);
       wp_enqueue_script('theme-script', B_TEMP_URL . '/assets/js/script.js', array('jquery'), B_VERSION, true);
 
       wp_localize_script('jquery', 'beyondVars', array(
